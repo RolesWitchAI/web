@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms and Conditions - Roles Witch AI</title>
+    <meta name="description" content="Terms and Conditions for Roles Witch AI - Your Magical Voice Assistant for iOS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B5CF6;
+            --primary-dark: #7C3AED;
+            --primary-light: #A78BFA;
+            --accent: #F472B6;
+            --bg-dark: #0F0F1A;
+            --bg-card: #1A1A2E;
+            --text: #F1F5F9;
+            --text-muted: #94A3B8;
+            --gradient-1: linear-gradient(135deg, #8B5CF6 0%, #F472B6 100%);
+            --gradient-2: linear-gradient(135deg, #F472B6 0%, #FB923C 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            bottom: 20%;
+            left: -100px;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: #60A5FA;
+            top: 50%;
+            right: 10%;
+            animation-delay: -14s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.9); }
+            75% { transform: translate(20px, 30px) scale(1.05); }
+        }
+
+        /* Stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 15, 26, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 10rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header .hero-badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 span {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .effective-date {
+            display: inline-block;
+            margin-top: 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 0.4rem 1rem;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 50px;
+        }
+
+        /* Policy Content */
+        .privacy-content {
+            padding: 2rem 2rem 6rem;
+            position: relative;
+        }
+
+        .privacy-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .policy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .policy-card:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.1);
+        }
+
+        .policy-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .policy-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .policy-card h2 .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-1);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .policy-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--primary-light);
+        }
+
+        .policy-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .policy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 1rem;
+        }
+
+        .policy-card ul li {
+            color: var(--text-muted);
+            padding: 0.5rem 0 0.5rem 1.75rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .policy-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 8px;
+            height: 8px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+        }
+
+        .policy-card strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .policy-card a {
+            color: var(--primary-light);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(167, 139, 250, 0.3);
+            transition: border-color 0.3s ease;
+        }
+
+        .policy-card a:hover {
+            border-color: var(--primary-light);
+        }
+
+        .callout {
+            background: rgba(244, 114, 182, 0.08);
+            border-left: 3px solid var(--accent);
+            padding: 1rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .callout strong {
+            color: var(--accent);
+        }
+
+        .success-callout {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 3px solid #10B981;
+            padding: 1rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+
+        .success-callout p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .success-callout strong {
+            color: #34D399;
+        }
+
+        .legal-block {
+            background: rgba(15, 15, 26, 0.6);
+            border: 1px dashed rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.25rem 0;
+            font-size: 0.9rem;
+            line-height: 1.75;
+            color: var(--text-muted);
+        }
+
+        .legal-block strong {
+            color: var(--text);
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: var(--primary);
+            transform: translateX(-4px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .footer-text a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page-header {
+                padding-top: 8rem;
+            }
+
+            .policy-card {
+                padding: 1.75rem;
+            }
+
+            .policy-card h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <img src="logo.jpeg" alt="Roles Witch AI" style="width: 40px; height: 40px; border-radius: 12px; object-fit: cover;">
+            </div>
+            Roles Witch AI
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/#privacy">Privacy</a>
+            <a href="/#support">Support</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="hero-badge">📜 Legal</div>
+        <h1>Terms and <span>Conditions</span></h1>
+        <p class="subtitle">The terms that govern your use of Roles Witch AI — please read them carefully before using the App.</p>
+        <div class="effective-date">Effective Date: April 8, 2026</div>
+    </section>
+
+    <!-- Terms Content -->
+    <section class="privacy-content">
+        <div class="privacy-wrapper">
+            <a href="/" class="back-home">← Back to Home</a>
+
+            <!-- Introduction -->
+            <div class="policy-card">
+                <h2><span class="num">§</span> Introduction</h2>
+                <p>These Terms and Conditions ("Terms") constitute a legally binding agreement between you ("you," "your," or "User") and Roles Witch AI ("we," "us," "our," or the "App"). They govern your access to and use of the Roles Witch AI mobile application for iOS and any related services we provide.</p>
+                <p>Roles Witch AI is a <strong>free</strong> application that functions as a client for on-device AI models and for any third-party AI server you choose to configure. Please read these Terms carefully. By downloading, installing, or using the App, you acknowledge that you have read, understood, and agreed to be bound by these Terms and by our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+            </div>
+
+            <!-- 1. Acceptance of Terms -->
+            <div class="policy-card">
+                <h2><span class="num">1</span> Acceptance of Terms</h2>
+                <p>By using Roles Witch AI, you confirm that you are of legal age and have the legal capacity to enter into these Terms in your jurisdiction. If you are using the App on behalf of an organization, you represent and warrant that you have authority to bind that organization to these Terms.</p>
+                <p>If you do not agree to these Terms, you must not download, install, access, or use the App. Your continued use of the App constitutes your ongoing acceptance of these Terms, including any updates.</p>
+            </div>
+
+            <!-- 2. Description of the App -->
+            <div class="policy-card">
+                <h2><span class="num">2</span> Description of the App</h2>
+                <p>Roles Witch AI is a voice assistant application that enables you to interact with artificial intelligence models through text, voice, and vision. The App supports two modes of operation:</p>
+                <ul>
+                    <li><strong>Local mode:</strong> AI inference performed entirely on your device using on-device models.</li>
+                    <li><strong>Remote mode:</strong> AI inference performed by a third-party server that <strong>you</strong> configure within the App. The App merely acts as a client that transmits your inputs to the endpoint you specify.</li>
+                </ul>
+                <div class="callout">
+                    <p><strong>What is "inference"?</strong> In the context of these Terms, "inference" means the act of running an already-trained AI model to produce an output (such as a text reply, a transcription, or an analysis of an image) from an input you provide. It is the step that actually generates the AI's response. Inference can happen <strong>locally</strong> — entirely on your iPhone's hardware with no network activity — or <strong>remotely</strong>, on a third-party server you have chosen to connect to, in which case your input is transmitted to that server over the internet and the server's response is sent back to the App. Roles Witch AI does not train AI models and does not operate inference servers of its own; it only performs local inference on your device or forwards your input to the remote endpoint you configured.</p>
+                </div>
+                <p>The App is provided free of charge. We do not offer subscriptions, in-app purchases, or any paid tiers.</p>
+            </div>
+
+            <!-- 3. AI Model Limitations and Disclaimers -->
+            <div class="policy-card">
+                <h2><span class="num">3</span> AI Model Limitations and Disclaimers</h2>
+                <p>You acknowledge and agree that:</p>
+                <ul>
+                    <li>The AI models accessible through Roles Witch AI may generate content that is incorrect, incomplete, outdated, misleading, biased, offensive, or otherwise inappropriate.</li>
+                    <li>You <strong>must not rely</strong> on AI-generated content for medical, legal, financial, psychological, safety-critical, or other professional advice. AI output is not a substitute for qualified professional judgment.</li>
+                    <li>AI models may occasionally produce biased, offensive, or harmful content despite any safeguards we or model providers may implement.</li>
+                    <li>You are <strong>solely responsible</strong> for verifying, reviewing, and evaluating any AI-generated content before acting upon it or sharing it with others.</li>
+                    <li>Roles Witch AI is not responsible for any decisions, actions, inactions, or consequences resulting from your use of AI-generated content.</li>
+                    <li>AI model responses are produced through probabilistic methods and do not necessarily reflect current, accurate, or factual information, nor the views of the App's developers.</li>
+                    <li>Any code, scripts, configurations, or technical solutions generated by AI must be thoroughly reviewed, audited, and tested before implementation in any environment.</li>
+                    <li>The App makes no representation that AI outputs are free from intellectual-property conflicts. You are responsible for assessing the suitability and legality of using such outputs.</li>
+                </ul>
+            </div>
+
+            <!-- 4. Data and Privacy -->
+            <div class="policy-card">
+                <h2><span class="num">4</span> Data and Privacy</h2>
+                <p>Your use of Roles Witch AI is also governed by our <a href="/privacy-policy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. In summary:</p>
+                <ul>
+                    <li>When using on-device models, all processing occurs on your device and no conversation data is transmitted to us or to any third party.</li>
+                    <li>When you configure and use a remote AI server, your conversations, prompts, images, and related metadata are transmitted <strong>directly from your device to the remote endpoint you specified</strong>. We neither receive nor intermediate this data.</li>
+                    <li>You are solely responsible for the physical and logical security of your device and any data you input into the App, including any API keys or credentials you store.</li>
+                    <li>You are solely responsible for ensuring that you have the legal right to use any content, prompts, images, audio, or other material you submit to the App or to any remote AI server.</li>
+                    <li>You are solely responsible for any consequences arising from sharing, publishing, or otherwise distributing AI-generated content to third parties.</li>
+                    <li>You acknowledge that configuring and using remote AI servers involves transmitting your data to independent third parties whose practices are outside our control.</li>
+                </ul>
+            </div>
+
+            <!-- 5. Third-Party Services -->
+            <div class="policy-card">
+                <h2><span class="num">5</span> Third-Party Services and Remote AI Servers</h2>
+                <p>Roles Witch AI can be configured to connect to any AI server, API endpoint, or model provider that you choose. You acknowledge and agree that:</p>
+                <ul>
+                    <li>Roles Witch AI and its developers are <strong>not affiliated with, endorsed by, partnered with, or responsible for</strong> any remote AI service, model provider, inference host, or third-party API that you configure the App to communicate with.</li>
+                    <li>The App acts solely as a <strong>client</strong>; the selection of, configuration of, and communication with any remote service is initiated and controlled entirely by you.</li>
+                    <li>We are not responsible for the practices, terms, policies, availability, performance, content, security, uptime, data handling, training practices, pricing, or conduct of any third-party service accessed through the App.</li>
+                    <li>You are responsible for independently <strong>reviewing and accepting the terms of service, acceptable use policy, and privacy policy</strong> of any third-party service before connecting to it. By configuring a remote endpoint, you represent that you have done so and that you accept those terms.</li>
+                    <li>Roles Witch AI makes <strong>no warranties</strong> regarding the availability, reliability, accuracy, performance, or legality of any third-party service.</li>
+                    <li>Any accounts, API keys, credentials, billing arrangements, quotas, and account management with third-party providers are <strong>your sole responsibility</strong>. We do not manage, validate, or have visibility into them.</li>
+                    <li>Any dispute, claim, chargeback, or liability arising from your use of a third-party service must be resolved directly between you and that third party.</li>
+                </ul>
+                <div class="callout">
+                    <p><strong>Important:</strong> Roles Witch AI does not operate AI inference servers. All AI processing happens either on your device or on servers you independently chose and configured. We neither host, relay, nor have access to traffic between your device and any remote endpoint.</p>
+                </div>
+            </div>
+
+            <!-- 6. Prohibited Uses -->
+            <div class="policy-card">
+                <h2><span class="num">6</span> Prohibited Uses</h2>
+                <p>You agree not to use Roles Witch AI, and not to attempt to use it:</p>
+                <ul>
+                    <li>For any unlawful purpose or in violation of any applicable local, national, or international law or regulation.</li>
+                    <li>To generate, distribute, or promote content that depicts or promotes illegal activities.</li>
+                    <li>To generate content that is discriminatory, hateful, harassing, threatening, defamatory, or that promotes harm against any individual, group, or protected class.</li>
+                    <li>To create, disseminate, or facilitate misleading, fraudulent, or deceptive content, including impersonation and disinformation.</li>
+                    <li>To generate spam, phishing content, malware, ransomware, exploits, or any other malicious code or payload.</li>
+                    <li>In any manner that could damage, disable, overburden, or impair the App or the operation of any device or network, or that interferes with any other party's use of the App.</li>
+                    <li>To reverse engineer, decompile, disassemble, extract, tamper with, or otherwise attempt to discover the source code, underlying algorithms, or AI models of the App, except to the extent such restriction is prohibited by applicable law.</li>
+                    <li>To generate or distribute content that infringes upon any third party's intellectual property, privacy, publicity, or other rights.</li>
+                    <li>To attempt to identify, reconstruct, or reverse-engineer the training data, weights, or architecture of any AI model.</li>
+                    <li>To engage in automated, systematic, or bulk extraction of content, including scraping, data mining, or any comparable activity.</li>
+                    <li>To circumvent any safety, content-moderation, or authentication mechanism of the App or of any remote AI service.</li>
+                </ul>
+            </div>
+
+            <!-- 7. Intellectual Property -->
+            <div class="policy-card">
+                <h2><span class="num">7</span> Intellectual Property</h2>
+                <p>The App, including its name, logo, visual design, user interface, code, and associated materials, is owned by Roles Witch AI and its licensors and is protected by copyright, trademark, and other intellectual-property laws. These Terms grant you a <strong>limited, revocable, non-exclusive, non-transferable, non-sublicensable license</strong> to use the App on iOS devices you own or control, for both personal and commercial purposes, in accordance with these Terms. You retain full ownership of any content you generate through the App, and you are free to use such content commercially, subject to the terms of any third-party AI service you may have used to produce it.</p>
+                <p>No rights are granted to you other than those expressly set out in these Terms. You may not copy, modify, distribute, sell, lease, sublicense, or create derivative works of the App, except as permitted by applicable law.</p>
+                <p>As between you and us, you retain any rights you have in the content you input into the App. You grant us no rights in such content, because we do not collect or store it.</p>
+            </div>
+
+            <!-- 8. Disclaimer of Warranties -->
+            <div class="policy-card">
+                <h2><span class="num">8</span> Disclaimer of Warranties</h2>
+                <div class="legal-block">
+                    <p>THE APP IS PROVIDED <strong>"AS IS"</strong> AND <strong>"AS AVAILABLE"</strong>, WITHOUT WARRANTIES OF ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, WE SPECIFICALLY DISCLAIM ALL IMPLIED WARRANTIES, INCLUDING THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT, ACCURACY, AND NON-INFRINGEMENT.</p>
+                </div>
+                <p>Without limiting the foregoing, we make no warranty that:</p>
+                <ul>
+                    <li>The App will meet your requirements, expectations, or intended use cases.</li>
+                    <li>The AI models (local or remote) will generate accurate, reliable, complete, safe, or appropriate content.</li>
+                    <li>The App will be uninterrupted, timely, secure, free of bugs, free of harmful components, or error-free.</li>
+                    <li>Any remote AI service, server, or endpoint you configure will be available, reliable, secure, error-free, or compliant with any law or standard.</li>
+                    <li>Any data transmitted to third-party services will remain confidential, secure, or free from unauthorized access.</li>
+                    <li>Defects or errors in the App will be corrected.</li>
+                </ul>
+                <p>No advice or information, whether oral or written, obtained by you from us or through the App shall create any warranty not expressly stated in these Terms.</p>
+            </div>
+
+            <!-- 9. Limitation of Liability -->
+            <div class="policy-card">
+                <h2><span class="num">9</span> Limitation of Liability</h2>
+                <div class="legal-block">
+                    <p>TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:</p>
+                </div>
+                <ul>
+                    <li>ROLES WITCH AI AND ITS DEVELOPERS, AFFILIATES, OFFICERS, EMPLOYEES, AND LICENSORS SHALL <strong>NOT BE LIABLE</strong> FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, EXEMPLARY, OR PUNITIVE DAMAGES, OR FOR ANY LOSS OF PROFITS, REVENUE, DATA, GOODWILL, BUSINESS OPPORTUNITY, USE, OR OTHER INTANGIBLE LOSSES, ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE APP.</li>
+                    <li>OUR TOTAL AGGREGATE LIABILITY ARISING FROM OR RELATED TO THESE TERMS OR YOUR USE OF THE APP SHALL <strong>NOT EXCEED THE AMOUNT YOU PAID TO US FOR THE APP</strong>, WHICH, BECAUSE THE APP IS PROVIDED FREE OF CHARGE, IS <strong>ZERO (US $0.00)</strong>.</li>
+                    <li>WE ARE NOT LIABLE FOR ANY ACTIONS YOU TAKE OR DECLINE TO TAKE BASED ON AI-GENERATED CONTENT, REGARDLESS OF THE SUBJECT MATTER OR CONSEQUENCES.</li>
+                    <li>WE ARE NOT LIABLE FOR ANY INTERRUPTION OF BUSINESS, LOSS OF DATA, OR ANY OTHER COMMERCIAL OR PERSONAL DAMAGES OR LOSSES.</li>
+                    <li>WE ARE NOT LIABLE FOR ANY ACTS, OMISSIONS, POLICIES, DATA PRACTICES, SECURITY INCIDENTS, OR OUTPUTS OF ANY THIRD-PARTY SERVICE, REMOTE AI SERVER, OR MODEL PROVIDER THAT YOU CHOOSE TO USE WITH THE APP.</li>
+                    <li>THESE LIMITATIONS APPLY WHETHER THE ALLEGED LIABILITY IS BASED ON CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER THEORY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND EVEN IF A REMEDY SET FORTH IN THESE TERMS IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.</li>
+                </ul>
+                <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In such jurisdictions, the above limitations apply only to the maximum extent permitted by law, and nothing in these Terms is intended to exclude liability that cannot be excluded under applicable law.</p>
+            </div>
+
+            <!-- 10. Indemnification -->
+            <div class="policy-card">
+                <h2><span class="num">10</span> Indemnification</h2>
+                <p>You agree to indemnify, defend, and hold harmless Roles Witch AI and its developers, affiliates, officers, directors, employees, agents, and licensors from and against any and all claims, demands, liabilities, damages, losses, costs, and expenses — including reasonable attorneys' fees — arising out of or in any way connected with:</p>
+                <ul>
+                    <li>Your access to or use of the App;</li>
+                    <li>Your violation of these Terms or any applicable law or regulation;</li>
+                    <li>Your violation of any third-party right, including intellectual-property, privacy, or publicity rights;</li>
+                    <li>Any content you submit, transmit, or share through the App;</li>
+                    <li>Any dispute between you and any third-party AI service you configure the App to use.</li>
+                </ul>
+                <p>We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which case you agree to cooperate with our defense of such claim.</p>
+            </div>
+
+            <!-- 11. Export Control -->
+            <div class="policy-card">
+                <h2><span class="num">11</span> Export Control and Sanctions</h2>
+                <p>You agree to comply with all applicable export-control and economic-sanctions laws and regulations, including those of the United States, the European Union, and your jurisdiction of residence, in connection with your use of the App and any AI capabilities accessed through it. You represent and warrant that you are not located in, under the control of, or a national or resident of any country or jurisdiction subject to a comprehensive embargo, and that you are not listed on any sanctioned-party list maintained by any government.</p>
+            </div>
+
+            <!-- 12. Termination -->
+            <div class="policy-card">
+                <h2><span class="num">12</span> Termination</h2>
+                <p>These Terms remain in effect while you use the App. You may terminate them at any time by uninstalling the App and ceasing all use. We may suspend or terminate your right to use the App at any time, with or without notice, if we believe you have violated these Terms or applicable law, or for any other reason we deem appropriate.</p>
+                <p>Upon termination, the provisions of these Terms that by their nature should survive — including Sections 3 (AI Disclaimers), 8 (Disclaimer of Warranties), 9 (Limitation of Liability), 10 (Indemnification), and 14 (Governing Law) — will survive.</p>
+            </div>
+
+            <!-- 13. Changes to Terms -->
+            <div class="policy-card">
+                <h2><span class="num">13</span> Changes to These Terms</h2>
+                <p>We reserve the right to modify these Terms at any time, for any reason, and without prior individual notice. When we make material changes, we will update the "Effective Date" at the top of this page and may, where appropriate, provide additional notice within the App or on our website. Your continued use of the App after any such modification constitutes your acceptance of the revised Terms. If you do not agree to the revised Terms, you must discontinue use of the App.</p>
+            </div>
+
+            <!-- 14. Governing Law -->
+            <div class="policy-card">
+                <h2><span class="num">14</span> Governing Law and Dispute Resolution</h2>
+                <p>These Terms and any dispute arising out of or relating to them or the App shall be governed by and construed in accordance with applicable laws, without regard to conflict-of-laws principles. To the extent permitted by law, any dispute shall first be attempted to be resolved informally by contacting us at the address below. If the dispute cannot be resolved informally, it shall be resolved exclusively by the courts of competent jurisdiction applicable to you as a consumer.</p>
+                <p>Nothing in these Terms limits any non-waivable statutory consumer rights you may have under applicable law.</p>
+            </div>
+
+            <!-- 15. Severability -->
+            <div class="policy-card">
+                <h2><span class="num">15</span> Severability and Entire Agreement</h2>
+                <p>If any provision of these Terms is held to be invalid, illegal, or unenforceable by a court of competent jurisdiction, such provision shall be modified to the minimum extent necessary to make it enforceable, or, if modification is not possible, severed from these Terms. The remaining provisions shall continue in full force and effect.</p>
+                <p>These Terms, together with the <a href="/privacy-policy.html">Privacy Policy</a>, constitute the entire agreement between you and us concerning the App and supersede all prior or contemporaneous understandings, communications, and agreements, whether written or oral, relating to the subject matter hereof.</p>
+                <p>Our failure to enforce any right or provision of these Terms shall not be deemed a waiver of such right or provision.</p>
+            </div>
+
+            <!-- 16. Contact -->
+            <div class="policy-card">
+                <h2><span class="num">16</span> Contact Us</h2>
+                <p>If you have questions, concerns, or comments about these Terms, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:hello@roleswitch.ai">hello@roleswitch.ai</a></p>
+            </div>
+
+            <a href="/" class="back-home">← Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">Roles Witch AI</div>
+                <p class="footer-text">
+                    Your magical voice assistant for iOS. Experience AI conversations like never before.<br/>
+                    <a href="mailto:hello@roleswitch.ai">Get support hello@roleswitch.ai</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Roles Witch AI. Made with magic for iOS.</p>
+            <p style="margin-top: 0.75rem;"><a href="/privacy-policy.html">Privacy Policy</a> · <a href="/terms-and-conditions.html">Terms & Conditions</a></p>
+            <p style="margin-top: 0.75rem; font-size: 0.8rem; opacity: 0.7;">AI-generated content may be inaccurate. Verify important information independently.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.opacity = Math.random() * 0.5 + 0.2;
+            starsContainer.appendChild(star);
+        }
+
+        // Parallax effect on orbs
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 20;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
