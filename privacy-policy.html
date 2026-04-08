@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Roles Witch AI</title>
+    <meta name="description" content="Privacy Policy for Roles Witch AI - Your Magical Voice Assistant for iOS.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #8B5CF6;
+            --primary-dark: #7C3AED;
+            --primary-light: #A78BFA;
+            --accent: #F472B6;
+            --bg-dark: #0F0F1A;
+            --bg-card: #1A1A2E;
+            --text: #F1F5F9;
+            --text-muted: #94A3B8;
+            --gradient-1: linear-gradient(135deg, #8B5CF6 0%, #F472B6 100%);
+            --gradient-2: linear-gradient(135deg, #F472B6 0%, #FB923C 100%);
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Animated Background */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            opacity: 0.5;
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .orb-1 {
+            width: 400px;
+            height: 400px;
+            background: var(--primary);
+            top: -100px;
+            right: -100px;
+            animation-delay: 0s;
+        }
+
+        .orb-2 {
+            width: 300px;
+            height: 300px;
+            background: var(--accent);
+            bottom: 20%;
+            left: -100px;
+            animation-delay: -7s;
+        }
+
+        .orb-3 {
+            width: 250px;
+            height: 250px;
+            background: #60A5FA;
+            top: 50%;
+            right: 10%;
+            animation-delay: -14s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            25% { transform: translate(30px, -30px) scale(1.1); }
+            50% { transform: translate(-20px, 20px) scale(0.9); }
+            75% { transform: translate(20px, 30px) scale(1.05); }
+        }
+
+        /* Stars */
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s ease-in-out infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(15, 15, 26, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.5rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gradient-1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 10rem 2rem 3rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header .hero-badge {
+            display: inline-block;
+            background: rgba(139, 92, 246, 0.2);
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            font-size: 0.875rem;
+            color: var(--primary-light);
+            margin-bottom: 1.5rem;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+        }
+
+        .page-header h1 span {
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .page-header .subtitle {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .effective-date {
+            display: inline-block;
+            margin-top: 1.25rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            padding: 0.4rem 1rem;
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 50px;
+        }
+
+        /* Privacy Content */
+        .privacy-content {
+            padding: 2rem 2rem 6rem;
+            position: relative;
+        }
+
+        .privacy-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+
+        .policy-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(139, 92, 246, 0.2);
+            border-radius: 24px;
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .policy-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gradient-1);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease;
+        }
+
+        .policy-card:hover {
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow: 0 20px 60px rgba(139, 92, 246, 0.1);
+        }
+
+        .policy-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .policy-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .policy-card h2 .num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: var(--gradient-1);
+            border-radius: 10px;
+            font-size: 0.95rem;
+            color: white;
+            flex-shrink: 0;
+        }
+
+        .policy-card h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 1.25rem 0 0.5rem;
+            color: var(--primary-light);
+        }
+
+        .policy-card p {
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .policy-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        .policy-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 1rem;
+        }
+
+        .policy-card ul li {
+            color: var(--text-muted);
+            padding: 0.5rem 0 0.5rem 1.75rem;
+            position: relative;
+            line-height: 1.7;
+        }
+
+        .policy-card ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            width: 8px;
+            height: 8px;
+            background: var(--gradient-1);
+            border-radius: 50%;
+        }
+
+        .policy-card strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        .policy-card a {
+            color: var(--primary-light);
+            text-decoration: none;
+            border-bottom: 1px solid rgba(167, 139, 250, 0.3);
+            transition: border-color 0.3s ease;
+        }
+
+        .policy-card a:hover {
+            border-color: var(--primary-light);
+        }
+
+        .callout {
+            background: rgba(244, 114, 182, 0.08);
+            border-left: 3px solid var(--accent);
+            padding: 1rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+
+        .callout p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .callout strong {
+            color: var(--accent);
+        }
+
+        .success-callout {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 3px solid #10B981;
+            padding: 1rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+        }
+
+        .success-callout p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            color: var(--text);
+        }
+
+        .success-callout strong {
+            color: #34D399;
+        }
+
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-light);
+            text-decoration: none;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            padding: 0.75rem 1.5rem;
+            border: 1px solid rgba(139, 92, 246, 0.3);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .back-home:hover {
+            background: rgba(139, 92, 246, 0.1);
+            border-color: var(--primary);
+            transform: translateX(-4px);
+        }
+
+        /* Footer */
+        footer {
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.2);
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            background: var(--gradient-1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1rem;
+        }
+
+        .footer-text {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .footer-text a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(139, 92, 246, 0.1);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-bottom a {
+            color: var(--primary-light);
+            text-decoration: none;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .page-header {
+                padding-top: 8rem;
+            }
+
+            .policy-card {
+                padding: 1.75rem;
+            }
+
+            .policy-card h2 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Stars -->
+    <div class="stars" id="stars"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="logo">
+            <div class="logo-icon">
+                <img src="logo.jpeg" alt="Roles Witch AI" style="width: 40px; height: 40px; border-radius: 12px; object-fit: cover;">
+            </div>
+            Roles Witch AI
+        </a>
+        <div class="nav-links">
+            <a href="/#features">Features</a>
+            <a href="/#privacy">Privacy</a>
+            <a href="/#support">Support</a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="hero-badge">🛡️ Privacy-First by Design</div>
+        <h1>Privacy <span>Policy</span></h1>
+        <p class="subtitle">How Roles Witch AI handles your data — written in plain language, and true to our privacy-first philosophy.</p>
+        <div class="effective-date">Effective Date: April 8, 2026</div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="privacy-content">
+        <div class="privacy-wrapper">
+            <a href="/" class="back-home">← Back to Home</a>
+
+            <!-- Introduction -->
+            <div class="policy-card">
+                <h2><span class="num">§</span> Introduction</h2>
+                <p>This Privacy Policy ("Policy") describes how Roles Witch AI (the "App," "we," "us," or "our") handles information in connection with your use of the App on iOS. Roles Witch AI is a free application that functions as a client for local, on-device AI models as well as any third-party AI server you choose to configure.</p>
+                <p>We have designed Roles Witch AI to minimize data collection to the greatest extent reasonably possible. By downloading, installing, or using the App, you acknowledge that you have read and understood this Policy. If you do not agree with any part of this Policy, please do not use the App.</p>
+                <div class="success-callout">
+                    <p><strong>In short:</strong> We do not collect analytics. We do not track you. We do not operate servers that receive your conversations. Your data stays on your device unless you personally choose to connect the App to a remote AI server.</p>
+                </div>
+            </div>
+
+            <!-- 1. Data Collection -->
+            <div class="policy-card">
+                <h2><span class="num">1</span> Data Collection Policy</h2>
+                <p><strong>We do not collect, receive, store, or process any personal information about you.</strong> Roles Witch AI does not include analytics SDKs, telemetry frameworks, crash reporting services, advertising identifiers, fingerprinting, or any other tracking technology.</p>
+                <p>Specifically, we do not collect:</p>
+                <ul>
+                    <li>Your name, email address, phone number, or other contact information</li>
+                    <li>Your device identifiers (IDFA, IDFV, advertising IDs)</li>
+                    <li>Your IP address or approximate location</li>
+                    <li>Your conversations, prompts, voice recordings, or any messages you exchange with AI models</li>
+                    <li>Usage statistics, feature interaction logs, or behavioral analytics</li>
+                    <li>Crash reports or diagnostic information</li>
+                </ul>
+                <p>The App operates without user accounts. You do not register, log in, or create a profile to use Roles Witch AI.</p>
+            </div>
+
+            <!-- 2. App Store and Device Permissions -->
+            <div class="policy-card">
+                <h2><span class="num">2</span> App Store and Device Permissions</h2>
+                <p>When you download the App from the Apple App Store, Apple may collect certain information in accordance with Apple's own privacy policy, which is independent of ours. We do not control, receive, or have access to any information Apple collects during installation, purchase, or delivery of the App.</p>
+                <p>The App may request the following device permissions, which are processed locally on your device:</p>
+                <ul>
+                    <li><strong>Microphone:</strong> Required to enable voice input for conversations with AI models. Audio is processed on your device and is not transmitted to us.</li>
+                    <li><strong>Camera:</strong> Required only if you choose to use the vision or video call features. Images and video frames are processed on your device or, if you have configured a remote AI server, sent to that server at your direction.</li>
+                    <li><strong>Speech Recognition:</strong> Performed using Apple's on-device speech recognition framework where available.</li>
+                    <li><strong>Network Access:</strong> Used solely when you explicitly configure the App to communicate with a remote AI server of your choice.</li>
+                </ul>
+                <p>You may revoke any of these permissions at any time through your iOS Settings. Revoking a permission will disable the associated feature but will not otherwise affect the App.</p>
+                <div class="callout">
+                    <p><strong>No Siri or Shortcuts Integration:</strong> Roles Witch AI does not integrate with Siri, SiriKit, App Intents, or the Shortcuts app. We do not expose any voice commands, intents, or automations to the operating system.</p>
+                </div>
+            </div>
+
+            <!-- 3. Local Data Storage -->
+            <div class="policy-card">
+                <h2><span class="num">3</span> Local Data Storage</h2>
+                <p>All data generated through your use of Roles Witch AI is stored <strong>exclusively on your device</strong>. This includes, but is not limited to:</p>
+                <ul>
+                    <li>App settings, preferences, and configuration</li>
+                    <li>Characters, personas, and custom roles you create</li>
+                    <li>Conversation history and chat transcripts</li>
+                    <li>Any AI models you download for on-device inference</li>
+                    <li>Remote server endpoints, API keys, and credentials you enter to connect to third-party AI services</li>
+                </ul>
+                <p>This information remains under your sole control at all times. It is never copied, synchronized, or transmitted to any server operated by us. If you delete the App, all locally stored data is removed by iOS, subject to any backups you have independently configured (for example, through iCloud Backup or device-level backups).</p>
+                <p><strong>Credentials you provide:</strong> Any API keys, tokens, or credentials you enter to connect to a remote AI service are stored locally on your device using standard iOS storage mechanisms. We never transmit, receive, or have visibility into these credentials.</p>
+            </div>
+
+            <!-- 4. AI Models -->
+            <div class="policy-card">
+                <h2><span class="num">4</span> On-Device AI Models</h2>
+                <p>Roles Witch AI supports running AI models directly on your device. When you use an on-device model:</p>
+                <ul>
+                    <li>The model runs entirely offline within the App</li>
+                    <li>Your prompts, inputs, and the model's responses never leave your device</li>
+                    <li>No data is transmitted to us or to any third party</li>
+                    <li>Network connectivity is not required for inference</li>
+                </ul>
+                <p>On-device models may be downloaded within the App. The download itself is a standard HTTPS request to the model's hosting location and is subject to that host's own terms and privacy practices. Once downloaded, the model is stored locally and used without further network access.</p>
+            </div>
+
+            <!-- 5. Remote AI Servers -->
+            <div class="policy-card">
+                <h2><span class="num">5</span> Remote AI Servers and Third-Party Services</h2>
+                <p>Roles Witch AI can be configured to connect to <strong>any AI server or API endpoint that you choose</strong>, including self-hosted models, OpenAI-compatible services, and other third-party inference providers. This functionality is entirely optional and is never enabled by default without your explicit configuration.</p>
+                <p><strong>When you configure and use a remote AI server, you acknowledge and agree that:</strong></p>
+                <ul>
+                    <li>The App acts solely as a <strong>client</strong> that transmits the data you provide (prompts, messages, images, audio, and related metadata) to the server endpoint you specified.</li>
+                    <li>The remote server is operated by a <strong>third party that is independent of us</strong>. Roles Witch AI and its developers are <strong>not affiliated with, endorsed by, or responsible for</strong> any remote AI service, model provider, or inference host.</li>
+                    <li>The remote service's <strong>own terms of service, acceptable use policy, and privacy policy</strong> govern how your data is handled once it leaves your device. You are solely responsible for reviewing, understanding, and accepting those terms before connecting to the service.</li>
+                    <li>We have <strong>no control over</strong> and <strong>no visibility into</strong> how the remote server stores, processes, retains, trains on, shares, or deletes your data.</li>
+                    <li>The choice of which remote server to use — and the decision to transmit any data to it — is entirely yours. By configuring a remote endpoint, you expressly authorize the App to communicate with it on your behalf.</li>
+                </ul>
+                <div class="callout">
+                    <p><strong>Important:</strong> If you are concerned about data privacy, we strongly recommend using on-device models exclusively, or only connecting to remote servers operated by parties you trust and whose privacy terms you have reviewed. Data transmitted to third-party servers is governed entirely by that third party's policies and is outside our control.</p>
+                </div>
+            </div>
+
+            <!-- 6. No Analytics -->
+            <div class="policy-card">
+                <h2><span class="num">6</span> No Analytics, No Tracking, No Advertising</h2>
+                <p>Roles Witch AI contains <strong>no analytics, no telemetry, no crash reporting, no advertising, and no tracking of any kind</strong>. We do not use Firebase, Google Analytics, Mixpanel, Amplitude, Sentry, Crashlytics, AppsFlyer, Adjust, or any comparable third-party SDK.</p>
+                <p>We do not build user profiles. We do not measure engagement. We do not A/B test. We do not attribute installs. We do not fingerprint devices. We do not monetize attention.</p>
+                <p>Because we do not collect analytics, there is nothing for you to opt out of — privacy is the default and only option.</p>
+            </div>
+
+            <!-- 7. Children's Privacy -->
+            <div class="policy-card">
+                <h2><span class="num">7</span> Children's Privacy</h2>
+                <p>Roles Witch AI is not directed to, marketed to, or intended for use by children under the age of 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided information to a remote AI service through the App, please contact the operator of that remote service directly, as such data is not accessible to us.</p>
+                <p>Parents and guardians are responsible for supervising the use of the App by minors, including reviewing the terms and privacy practices of any remote AI server their child may configure.</p>
+            </div>
+
+            <!-- 8. Your Responsibilities -->
+            <div class="policy-card">
+                <h2><span class="num">8</span> Your Responsibilities</h2>
+                <p>Because Roles Witch AI stores data locally and does not maintain servers on your behalf, you are responsible for:</p>
+                <ul>
+                    <li><strong>Securing your device</strong> with a passcode, Face ID, or Touch ID to prevent unauthorized access to locally stored data.</li>
+                    <li><strong>Managing your backups.</strong> If you enable iCloud Backup or device backups, locally stored data may be included; review Apple's backup settings to control this.</li>
+                    <li><strong>Reviewing third-party terms.</strong> Before connecting the App to any remote AI server, read and accept that provider's terms of service and privacy policy.</li>
+                    <li><strong>Safeguarding your credentials.</strong> API keys and tokens you enter are stored on your device; do not share screenshots or device backups that may expose them.</li>
+                    <li><strong>Appropriate use.</strong> You are solely responsible for the content you generate, the prompts you submit to remote services, and compliance with the laws and terms applicable to your use.</li>
+                </ul>
+            </div>
+
+            <!-- 9. AI-Generated Content -->
+            <div class="policy-card">
+                <h2><span class="num">9</span> AI-Generated Content Disclaimer</h2>
+                <p>Roles Witch AI enables interactions with artificial intelligence models that generate text, voice, and other content. AI-generated output may contain inaccuracies, errors, biases, or content that is offensive, inappropriate, or otherwise objectionable. Such output does not represent our views or opinions.</p>
+                <p>You should independently verify any information that is material to your decisions. The App is provided for personal, informational, and entertainment purposes only and is not a substitute for professional advice (medical, legal, financial, or otherwise).</p>
+            </div>
+
+            <!-- 10. International Users -->
+            <div class="policy-card">
+                <h2><span class="num">10</span> International Users and Applicable Law</h2>
+                <p>Roles Witch AI is available globally through the Apple App Store. Because we do not collect personal data, most international data-protection obligations (including the GDPR, CCPA/CPRA, and similar regimes) are inapplicable to us as a data controller or processor. If you configure the App to connect to a remote AI server, the operator of that server may be subject to such regulations, and you should consult that operator's privacy policy.</p>
+                <p>You are responsible for ensuring that your use of the App and any remote services complies with the laws of your jurisdiction.</p>
+            </div>
+
+            <!-- 11. Changes -->
+            <div class="policy-card">
+                <h2><span class="num">11</span> Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in the App, changes in applicable law, or for other operational reasons. When we make material changes, we will update the "Effective Date" at the top of this page and, where appropriate, provide notice within the App or on our website.</p>
+                <p>Your continued use of the App after any update constitutes acceptance of the revised Policy. If you do not agree to the updated Policy, please discontinue use of the App.</p>
+            </div>
+
+            <!-- 12. Contact -->
+            <div class="policy-card">
+                <h2><span class="num">12</span> Contact Us</h2>
+                <p>If you have questions, concerns, or comments about this Privacy Policy or our privacy practices, please contact us at:</p>
+                <p><strong>Email:</strong> <a href="mailto:hello@roleswitch.ai">hello@roleswitch.ai</a></p>
+                <p>Please note that because we do not collect or store personal information, we are generally unable to respond to requests for access, correction, deletion, or portability of personal data — there is simply no data in our possession to act upon. For data that may have been transmitted to a remote AI server you configured, please contact that service provider directly.</p>
+            </div>
+
+            <a href="/" class="back-home">← Back to Home</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div>
+                <div class="footer-logo">Roles Witch AI</div>
+                <p class="footer-text">
+                    Your magical voice assistant for iOS. Experience AI conversations like never before.<br/>
+                    <a href="mailto:hello@roleswitch.ai">Get support hello@roleswitch.ai</a>
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Roles Witch AI. Made with magic for iOS.</p>
+            <p style="margin-top: 0.75rem;"><a href="/privacy-policy.html">Privacy Policy</a></p>
+            <p style="margin-top: 0.75rem; font-size: 0.8rem; opacity: 0.7;">AI-generated content may be inaccurate. Verify important information independently.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Generate stars
+        const starsContainer = document.getElementById('stars');
+        for (let i = 0; i < 100; i++) {
+            const star = document.createElement('div');
+            star.className = 'star';
+            star.style.left = Math.random() * 100 + '%';
+            star.style.top = Math.random() * 100 + '%';
+            star.style.animationDelay = Math.random() * 3 + 's';
+            star.style.opacity = Math.random() * 0.5 + 0.2;
+            starsContainer.appendChild(star);
+        }
+
+        // Parallax effect on orbs
+        document.addEventListener('mousemove', (e) => {
+            const orbs = document.querySelectorAll('.orb');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 20;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
