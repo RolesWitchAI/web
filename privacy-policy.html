@@ -500,7 +500,7 @@
         <div class="hero-badge">🛡️ Privacy-First by Design</div>
         <h1>Privacy <span>Policy</span></h1>
         <p class="subtitle">How Roles Witch AI handles your data — written in plain language, and true to our privacy-first philosophy.</p>
-        <div class="effective-date">Effective Date: April 8, 2026</div>
+        <div class="effective-date">Effective Date: April 11, 2026</div>
     </section>
 
     <!-- Privacy Content -->
@@ -511,10 +511,10 @@
             <!-- Introduction -->
             <div class="policy-card">
                 <h2><span class="num">§</span> Introduction</h2>
-                <p>This Privacy Policy ("Policy") describes how Roles Witch AI (the "App," "we," "us," or "our") handles information in connection with your use of the App on iOS. Roles Witch AI is a free application that functions as a client for local, on-device AI models as well as any third-party AI server you choose to configure.</p>
+                <p>This Privacy Policy ("Policy") describes how Roles Witch AI (the "App," "we," "us," or "our") handles information in connection with your use of the App on iOS. Roles Witch AI is a free application that runs AI models entirely on your device.</p>
                 <p>We have designed Roles Witch AI to minimize data collection to the greatest extent reasonably possible. By downloading, installing, or using the App, you acknowledge that you have read and understood this Policy. If you do not agree with any part of this Policy, please do not use the App.</p>
                 <div class="success-callout">
-                    <p><strong>In short:</strong> We do not collect analytics. We do not track you. We do not operate servers that receive your conversations. Your data stays on your device unless you personally choose to connect the App to a remote AI server.</p>
+                    <p><strong>In short:</strong> We do not collect analytics. We do not track you. We do not operate servers that receive your conversations. All AI processing happens on your device, and your data stays on your device.</p>
                 </div>
             </div>
 
@@ -541,9 +541,9 @@
                 <p>The App may request the following device permissions, which are processed locally on your device:</p>
                 <ul>
                     <li><strong>Microphone:</strong> Required to enable voice input for conversations with AI models. Raw audio is never transmitted to us. Audio may, however, be processed by Apple's Speech Recognition service as described below.</li>
-                    <li><strong>Camera:</strong> Required only if you choose to use the vision or video call features. Images and video frames are processed on your device or, if you have configured a remote AI server, sent to that server at your direction.</li>
-                    <li><strong>Speech Recognition:</strong> The App uses Apple's Speech Recognition framework (<code>SFSpeechRecognizer</code>) to transcribe your voice into text. Depending on your device, language, and iOS capabilities, Apple may perform this transcription <strong>either on your device or on Apple's servers</strong>. When server-based recognition is used, short audio clips are sent to Apple and handled under Apple's own privacy policy — not ours. You can enforce on-device transcription directly within the App by enabling <strong>"Require on-device recognition"</strong> in the App's Settings; when this option is enabled, the App instructs the system to perform speech recognition exclusively on your device, and no audio is sent to Apple. We never receive the audio or the resulting transcript beyond what is needed to pass the text to your selected AI model (local or remote, per your configuration).</li>
-                    <li><strong>Network Access:</strong> Used solely when you explicitly configure the App to communicate with a remote AI server of your choice.</li>
+                    <li><strong>Camera:</strong> Required only if you choose to use the vision or video call features. Images and video frames are processed entirely on your device and are never transmitted to us or to any third party.</li>
+                    <li><strong>Speech Recognition:</strong> The App uses Apple's Speech Recognition framework (<code>SFSpeechRecognizer</code>) to transcribe your voice into text. Depending on your device, language, and iOS capabilities, Apple may perform this transcription <strong>either on your device or on Apple's servers</strong>. When server-based recognition is used, short audio clips are sent to Apple and handled under Apple's own privacy policy — not ours. You can enforce on-device transcription directly within the App by enabling <strong>"Require on-device recognition"</strong> in the App's Settings; when this option is enabled, the App instructs the system to perform speech recognition exclusively on your device, and no audio is sent to Apple. We never receive the audio or the resulting transcript beyond what is needed to pass the text to the on-device AI model.</li>
+                    <li><strong>Network Access:</strong> Used solely to download on-device AI models from their hosting location over HTTPS. Once a model is downloaded, no further network access is required for AI inference.</li>
                 </ul>
                 <p>You may revoke any of these permissions at any time through your iOS Settings. Revoking a permission will disable the associated feature but will not otherwise affect the App.</p>
             </div>
@@ -557,97 +557,76 @@
                     <li>Characters, personas, and custom roles you create</li>
                     <li>Conversation history and chat transcripts</li>
                     <li>Any AI models you download for on-device inference</li>
-                    <li>Remote server endpoints, API keys, and credentials you enter to connect to third-party AI services</li>
                 </ul>
                 <p>This information remains under your sole control at all times. It is never copied, synchronized, or transmitted to any server operated by us. If you delete the App, all locally stored data is removed by iOS, subject to any backups you have independently configured (for example, through iCloud Backup or device-level backups).</p>
-                <p><strong>Credentials you provide:</strong> Any API keys, tokens, or credentials you enter to connect to a remote AI service are stored locally on your device using standard iOS storage mechanisms. We never transmit, receive, or have visibility into these credentials.</p>
             </div>
 
             <!-- 4. AI Models -->
             <div class="policy-card">
                 <h2><span class="num">4</span> On-Device AI Models</h2>
-                <p>Roles Witch AI supports running AI models directly on your device. When you use an on-device model:</p>
+                <p>Roles Witch AI runs AI models directly on your device. When you use the App:</p>
                 <ul>
                     <li>The model runs entirely offline within the App</li>
                     <li>Your prompts, inputs, and the model's responses never leave your device</li>
                     <li>No data is transmitted to us or to any third party</li>
                     <li>Network connectivity is not required for inference</li>
                 </ul>
-                <p>On-device models may be downloaded within the App. The download itself is a standard HTTPS request to the model's hosting location and is subject to that host's own terms and privacy practices. Once downloaded, the model is stored locally and used without further network access.</p>
+                <p>On-device models are downloaded within the App. The download itself is a standard HTTPS request to the model's hosting location and is subject to that host's own terms and privacy practices. This is the only network activity required for AI functionality — once a model is downloaded, it is stored locally and used without further network access. We do not operate any AI server, and the App does not transmit your prompts, conversations, or any other user content to any remote endpoint.</p>
             </div>
 
-            <!-- 5. Remote AI Servers -->
+            <!-- 5. No Analytics -->
             <div class="policy-card">
-                <h2><span class="num">5</span> Remote AI Servers and Third-Party Services</h2>
-                <p>Roles Witch AI can be configured to connect to <strong>any AI server or API endpoint that you choose</strong>, including self-hosted models, OpenAI-compatible services, and other third-party inference providers. This functionality is entirely optional and is never enabled by default without your explicit configuration.</p>
-                <p><strong>When you configure and use a remote AI server, you acknowledge and agree that:</strong></p>
-                <ul>
-                    <li>The App acts solely as a <strong>client</strong> that transmits the data you provide (prompts, messages, images, audio, and related metadata) to the server endpoint you specified.</li>
-                    <li>The remote server is operated by a <strong>third party that is independent of us</strong>. Roles Witch AI and its developers are <strong>not affiliated with, endorsed by, or responsible for</strong> any remote AI service, model provider, or inference host.</li>
-                    <li>The remote service's <strong>own terms of service, acceptable use policy, and privacy policy</strong> govern how your data is handled once it leaves your device. You are solely responsible for reviewing, understanding, and accepting those terms before connecting to the service.</li>
-                    <li>We have <strong>no control over</strong> and <strong>no visibility into</strong> how the remote server stores, processes, retains, trains on, shares, or deletes your data.</li>
-                    <li>The choice of which remote server to use — and the decision to transmit any data to it — is entirely yours. By configuring a remote endpoint, you expressly authorize the App to communicate with it on your behalf.</li>
-                </ul>
-                <div class="callout">
-                    <p><strong>Important:</strong> If you are concerned about data privacy, we strongly recommend using on-device models exclusively, or only connecting to remote servers operated by parties you trust and whose privacy terms you have reviewed. Data transmitted to third-party servers is governed entirely by that third party's policies and is outside our control.</p>
-                </div>
-            </div>
-
-            <!-- 6. No Analytics -->
-            <div class="policy-card">
-                <h2><span class="num">6</span> No Analytics, No Tracking, No Advertising</h2>
+                <h2><span class="num">5</span> No Analytics, No Tracking, No Advertising</h2>
                 <p>Roles Witch AI contains <strong>no analytics, no telemetry, no crash reporting, no advertising, and no tracking of any kind</strong>. We do not use Firebase, Google Analytics, Mixpanel, Amplitude, Sentry, Crashlytics, AppsFlyer, Adjust, or any comparable third-party SDK.</p>
                 <p>We do not build user profiles. We do not measure engagement. We do not A/B test. We do not attribute installs. We do not fingerprint devices. We do not monetize attention.</p>
                 <p>Because we do not collect analytics, there is nothing for you to opt out of — privacy is the default and only option.</p>
             </div>
 
-            <!-- 7. Children's Privacy -->
+            <!-- 6. Children's Privacy -->
             <div class="policy-card">
-                <h2><span class="num">7</span> Children's Privacy</h2>
-                <p>Roles Witch AI is not directed to, marketed to, or intended for use by children under the age of 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children. If you are a parent or guardian and believe that your child has provided information to a remote AI service through the App, please contact the operator of that remote service directly, as such data is not accessible to us.</p>
-                <p>Parents and guardians are responsible for supervising the use of the App by minors, including reviewing the terms and privacy practices of any remote AI server their child may configure.</p>
+                <h2><span class="num">6</span> Children's Privacy</h2>
+                <p>Roles Witch AI is not directed to, marketed to, or intended for use by children under the age of 13 (or the equivalent minimum age in your jurisdiction). We do not knowingly collect personal information from children.</p>
+                <p>Parents and guardians are responsible for supervising the use of the App by minors.</p>
             </div>
 
-            <!-- 8. Your Responsibilities -->
+            <!-- 7. Your Responsibilities -->
             <div class="policy-card">
-                <h2><span class="num">8</span> Your Responsibilities</h2>
+                <h2><span class="num">7</span> Your Responsibilities</h2>
                 <p>Because Roles Witch AI stores data locally and does not maintain servers on your behalf, you are responsible for:</p>
                 <ul>
                     <li><strong>Securing your device</strong> with a passcode, Face ID, or Touch ID to prevent unauthorized access to locally stored data.</li>
                     <li><strong>Managing your backups.</strong> If you enable iCloud Backup or device backups, locally stored data may be included; review Apple's backup settings to control this.</li>
-                    <li><strong>Reviewing third-party terms.</strong> Before connecting the App to any remote AI server, read and accept that provider's terms of service and privacy policy.</li>
-                    <li><strong>Safeguarding your credentials.</strong> API keys and tokens you enter are stored on your device; do not share screenshots or device backups that may expose them.</li>
-                    <li><strong>Appropriate use.</strong> You are solely responsible for the content you generate, the prompts you submit to remote services, and compliance with the laws and terms applicable to your use.</li>
+                    <li><strong>Appropriate use.</strong> You are solely responsible for the content you generate and for compliance with the laws and terms applicable to your use.</li>
                 </ul>
             </div>
 
-            <!-- 9. AI-Generated Content -->
+            <!-- 8. AI-Generated Content -->
             <div class="policy-card">
-                <h2><span class="num">9</span> AI-Generated Content Disclaimer</h2>
+                <h2><span class="num">8</span> AI-Generated Content Disclaimer</h2>
                 <p>Roles Witch AI enables interactions with artificial intelligence models that generate text, voice, and other content. AI-generated output may contain inaccuracies, errors, biases, or content that is offensive, inappropriate, or otherwise objectionable. Such output does not represent our views or opinions.</p>
                 <p>You should independently verify any information that is material to your decisions. The App is provided for personal, informational, and entertainment purposes only and is not a substitute for professional advice (medical, legal, financial, or otherwise).</p>
             </div>
 
-            <!-- 10. International Users -->
+            <!-- 9. International Users -->
             <div class="policy-card">
-                <h2><span class="num">10</span> International Users and Applicable Law</h2>
-                <p>Roles Witch AI is available globally through the Apple App Store. Because we do not collect personal data, most international data-protection obligations (including the GDPR, CCPA/CPRA, and similar regimes) are inapplicable to us as a data controller or processor. If you configure the App to connect to a remote AI server, the operator of that server may be subject to such regulations, and you should consult that operator's privacy policy.</p>
-                <p>You are responsible for ensuring that your use of the App and any remote services complies with the laws of your jurisdiction.</p>
+                <h2><span class="num">9</span> International Users and Applicable Law</h2>
+                <p>Roles Witch AI is available globally through the Apple App Store. Because we do not collect personal data, most international data-protection obligations (including the GDPR, CCPA/CPRA, and similar regimes) are inapplicable to us as a data controller or processor.</p>
+                <p>You are responsible for ensuring that your use of the App complies with the laws of your jurisdiction.</p>
             </div>
 
-            <!-- 11. Changes -->
+            <!-- 10. Changes -->
             <div class="policy-card">
-                <h2><span class="num">11</span> Changes to This Privacy Policy</h2>
+                <h2><span class="num">10</span> Changes to This Privacy Policy</h2>
                 <p>We may update this Privacy Policy from time to time to reflect changes in the App, changes in applicable law, or for other operational reasons. When we make material changes, we will update the "Effective Date" at the top of this page and, where appropriate, provide notice within the App or on our website.</p>
                 <p>Your continued use of the App after any update constitutes acceptance of the revised Policy. If you do not agree to the updated Policy, please discontinue use of the App.</p>
             </div>
 
-            <!-- 12. Contact -->
+            <!-- 11. Contact -->
             <div class="policy-card">
-                <h2><span class="num">12</span> Contact Us</h2>
+                <h2><span class="num">11</span> Contact Us</h2>
                 <p>If you have questions, concerns, or comments about this Privacy Policy or our privacy practices, please contact us at:</p>
                 <p><strong>Email:</strong> <a href="mailto:hello@roleswitch.ai">hello@roleswitch.ai</a></p>
-                <p>Please note that because we do not collect or store personal information, we are generally unable to respond to requests for access, correction, deletion, or portability of personal data — there is simply no data in our possession to act upon. For data that may have been transmitted to a remote AI server you configured, please contact that service provider directly.</p>
+                <p>Please note that because we do not collect or store personal information, we are generally unable to respond to requests for access, correction, deletion, or portability of personal data — there is simply no data in our possession to act upon.</p>
             </div>
 
             <a href="/" class="back-home">← Back to Home</a>

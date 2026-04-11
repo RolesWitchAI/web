@@ -515,7 +515,7 @@
         <div class="hero-badge">📜 Legal</div>
         <h1>Terms and <span>Conditions</span></h1>
         <p class="subtitle">The terms that govern your use of Roles Witch AI — please read them carefully before using the App.</p>
-        <div class="effective-date">Effective Date: April 8, 2026</div>
+        <div class="effective-date">Effective Date: April 11, 2026</div>
     </section>
 
     <!-- Terms Content -->
@@ -527,7 +527,7 @@
             <div class="policy-card">
                 <h2><span class="num">§</span> Introduction</h2>
                 <p>These Terms and Conditions ("Terms") constitute a legally binding agreement between you ("you," "your," or "User") and Roles Witch AI ("we," "us," "our," or the "App"). They govern your access to and use of the Roles Witch AI mobile application for iOS and any related services we provide.</p>
-                <p>Roles Witch AI is a <strong>free</strong> application that functions as a client for on-device AI models and for any third-party AI server you choose to configure. Please read these Terms carefully. By downloading, installing, or using the App, you acknowledge that you have read, understood, and agreed to be bound by these Terms and by our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
+                <p>Roles Witch AI is a <strong>free</strong> application that runs AI models entirely on your device. Please read these Terms carefully. By downloading, installing, or using the App, you acknowledge that you have read, understood, and agreed to be bound by these Terms and by our <a href="/privacy-policy.html">Privacy Policy</a>.</p>
             </div>
 
             <!-- 1. Acceptance of Terms -->
@@ -540,13 +540,9 @@
             <!-- 2. Description of the App -->
             <div class="policy-card">
                 <h2><span class="num">2</span> Description of the App</h2>
-                <p>Roles Witch AI is a voice assistant application that enables you to interact with artificial intelligence models through text, voice, and vision. The App supports two modes of operation:</p>
-                <ul>
-                    <li><strong>Local mode:</strong> AI inference performed entirely on your device using on-device models.</li>
-                    <li><strong>Remote mode:</strong> AI inference performed by a third-party server that <strong>you</strong> configure within the App. The App merely acts as a client that transmits your inputs to the endpoint you specify.</li>
-                </ul>
+                <p>Roles Witch AI is a voice assistant application that enables you to interact with artificial intelligence models through text, voice, and vision. All AI inference is performed <strong>entirely on your device</strong> using on-device models.</p>
                 <div class="callout">
-                    <p><strong>What is "inference"?</strong> In the context of these Terms, "inference" means the act of running an already-trained AI model to produce an output (such as a text reply, a transcription, or an analysis of an image) from an input you provide. It is the step that actually generates the AI's response. Inference can happen <strong>locally</strong> — entirely on your iPhone's hardware with no network activity — or <strong>remotely</strong>, on a third-party server you have chosen to connect to, in which case your input is transmitted to that server over the internet and the server's response is sent back to the App. Roles Witch AI does not train AI models and does not operate inference servers of its own; it only performs local inference on your device or forwards your input to the remote endpoint you configured.</p>
+                    <p><strong>What is "inference"?</strong> In the context of these Terms, "inference" means the act of running an already-trained AI model to produce an output (such as a text reply, a transcription, or an analysis of an image) from an input you provide. It is the step that actually generates the AI's response. In Roles Witch AI, inference happens <strong>entirely on your iPhone's hardware</strong> — your prompts and the model's responses never leave your device. Roles Witch AI does not train AI models and does not operate inference servers of its own. The only network activity required for AI functionality is a standard HTTPS download when you install a new on-device model; after that, the model runs offline.</p>
                 </div>
                 <p>The App is provided free of charge. We do not offer subscriptions, in-app purchases, or any paid tiers.</p>
             </div>
@@ -556,7 +552,7 @@
                 <h2><span class="num">3</span> AI Model Limitations and Disclaimers</h2>
                 <p>You acknowledge and agree that:</p>
                 <ul>
-                    <li>The AI models accessible through Roles Witch AI may generate content that is incorrect, incomplete, outdated, misleading, biased, offensive, or otherwise inappropriate.</li>
+                    <li>The AI models used by Roles Witch AI may generate content that is incorrect, incomplete, outdated, misleading, biased, offensive, or otherwise inappropriate.</li>
                     <li>You <strong>must not rely</strong> on AI-generated content for medical, legal, financial, psychological, safety-critical, or other professional advice. AI output is not a substitute for qualified professional judgment.</li>
                     <li>AI models may occasionally produce biased, offensive, or harmful content despite any safeguards we or model providers may implement.</li>
                     <li>You are <strong>solely responsible</strong> for verifying, reviewing, and evaluating any AI-generated content before acting upon it or sharing it with others.</li>
@@ -572,30 +568,26 @@
                 <h2><span class="num">4</span> Data and Privacy</h2>
                 <p>Your use of Roles Witch AI is also governed by our <a href="/privacy-policy.html">Privacy Policy</a>, which is incorporated into these Terms by reference. In summary:</p>
                 <ul>
-                    <li>When using on-device models, all processing occurs on your device and no conversation data is transmitted to us or to any third party.</li>
-                    <li>When you configure and use a remote AI server, your conversations, prompts, images, and related metadata are transmitted <strong>directly from your device to the remote endpoint you specified</strong>. We neither receive nor intermediate this data.</li>
-                    <li>You are solely responsible for the physical and logical security of your device and any data you input into the App, including any API keys or credentials you store.</li>
-                    <li>You are solely responsible for ensuring that you have the legal right to use any content, prompts, images, audio, or other material you submit to the App or to any remote AI server.</li>
+                    <li>All AI processing occurs on your device, and no conversation data is transmitted to us or to any third party.</li>
+                    <li>The only network activity required for AI functionality is a standard HTTPS download when you install a new on-device model. After that, inference is fully offline.</li>
+                    <li>You are solely responsible for the physical and logical security of your device and any data you input into the App.</li>
+                    <li>You are solely responsible for ensuring that you have the legal right to use any content, prompts, images, audio, or other material you submit to the App.</li>
                     <li>You are solely responsible for any consequences arising from sharing, publishing, or otherwise distributing AI-generated content to third parties.</li>
-                    <li>You acknowledge that configuring and using remote AI servers involves transmitting your data to independent third parties whose practices are outside our control.</li>
                 </ul>
             </div>
 
-            <!-- 5. Third-Party Services -->
+            <!-- 5. Model Downloads -->
             <div class="policy-card">
-                <h2><span class="num">5</span> Third-Party Services and Remote AI Servers</h2>
-                <p>Roles Witch AI can be configured to connect to any AI server, API endpoint, or model provider that you choose. You acknowledge and agree that:</p>
+                <h2><span class="num">5</span> Model Downloads</h2>
+                <p>On-device AI models are downloaded within the App over standard HTTPS from their hosting location. You acknowledge and agree that:</p>
                 <ul>
-                    <li>Roles Witch AI and its developers are <strong>not affiliated with, endorsed by, partnered with, or responsible for</strong> any remote AI service, model provider, inference host, or third-party API that you configure the App to communicate with.</li>
-                    <li>The App acts solely as a <strong>client</strong>; the selection of, configuration of, and communication with any remote service is initiated and controlled entirely by you.</li>
-                    <li>We are not responsible for the practices, terms, policies, availability, performance, content, security, uptime, data handling, training practices, pricing, or conduct of any third-party service accessed through the App.</li>
-                    <li>You are responsible for independently <strong>reviewing and accepting the terms of service, acceptable use policy, and privacy policy</strong> of any third-party service before connecting to it. By configuring a remote endpoint, you represent that you have done so and that you accept those terms.</li>
-                    <li>Roles Witch AI makes <strong>no warranties</strong> regarding the availability, reliability, accuracy, performance, or legality of any third-party service.</li>
-                    <li>Any accounts, API keys, credentials, billing arrangements, quotas, and account management with third-party providers are <strong>your sole responsibility</strong>. We do not manage, validate, or have visibility into them.</li>
-                    <li>Any dispute, claim, chargeback, or liability arising from your use of a third-party service must be resolved directly between you and that third party.</li>
+                    <li>The download itself is a transient network request subject to the hosting provider's own terms and privacy practices.</li>
+                    <li>Roles Witch AI and its developers are <strong>not affiliated with, endorsed by, or responsible for</strong> the providers or hosts of any AI model you download.</li>
+                    <li>Once a model is downloaded, it is stored locally and used without any further network access for inference.</li>
+                    <li>Roles Witch AI makes <strong>no warranties</strong> regarding the availability, reliability, accuracy, performance, or legality of any third-party model.</li>
                 </ul>
                 <div class="callout">
-                    <p><strong>Important:</strong> Roles Witch AI does not operate AI inference servers. All AI processing happens either on your device or on servers you independently chose and configured. We neither host, relay, nor have access to traffic between your device and any remote endpoint.</p>
+                    <p><strong>Important:</strong> Roles Witch AI does not operate AI inference servers, and the App does not transmit your prompts, conversations, images, or voice data to any remote endpoint. All AI processing happens on your device.</p>
                 </div>
             </div>
 
@@ -614,14 +606,14 @@
                     <li>To generate or distribute content that infringes upon any third party's intellectual property, privacy, publicity, or other rights.</li>
                     <li>To attempt to identify, reconstruct, or reverse-engineer the training data, weights, or architecture of any AI model.</li>
                     <li>To engage in automated, systematic, or bulk extraction of content, including scraping, data mining, or any comparable activity.</li>
-                    <li>To circumvent any safety, content-moderation, or authentication mechanism of the App or of any remote AI service.</li>
+                    <li>To circumvent any safety, content-moderation, or authentication mechanism of the App.</li>
                 </ul>
             </div>
 
             <!-- 7. Intellectual Property -->
             <div class="policy-card">
                 <h2><span class="num">7</span> Intellectual Property</h2>
-                <p>The App, including its name, logo, visual design, user interface, code, and associated materials, is owned by Roles Witch AI and its licensors and is protected by copyright, trademark, and other intellectual-property laws. These Terms grant you a <strong>limited, revocable, non-exclusive, non-transferable, non-sublicensable license</strong> to use the App on iOS devices you own or control, for both personal and commercial purposes, in accordance with these Terms. You retain full ownership of any content you generate through the App, and you are free to use such content commercially, subject to the terms of any third-party AI service you may have used to produce it.</p>
+                <p>The App, including its name, logo, visual design, user interface, code, and associated materials, is owned by Roles Witch AI and its licensors and is protected by copyright, trademark, and other intellectual-property laws. These Terms grant you a <strong>limited, revocable, non-exclusive, non-transferable, non-sublicensable license</strong> to use the App on iOS devices you own or control, for both personal and commercial purposes, in accordance with these Terms. You retain full ownership of any content you generate through the App, and you are free to use such content, including commercially, in accordance with these Terms.</p>
                 <p>No rights are granted to you other than those expressly set out in these Terms. You may not copy, modify, distribute, sell, lease, sublicense, or create derivative works of the App, except as permitted by applicable law.</p>
                 <p>As between you and us, you retain any rights you have in the content you input into the App. You grant us no rights in such content, because we do not collect or store it.</p>
             </div>
@@ -635,10 +627,9 @@
                 <p>Without limiting the foregoing, we make no warranty that:</p>
                 <ul>
                     <li>The App will meet your requirements, expectations, or intended use cases.</li>
-                    <li>The AI models (local or remote) will generate accurate, reliable, complete, safe, or appropriate content.</li>
+                    <li>The AI models will generate accurate, reliable, complete, safe, or appropriate content.</li>
                     <li>The App will be uninterrupted, timely, secure, free of bugs, free of harmful components, or error-free.</li>
-                    <li>Any remote AI service, server, or endpoint you configure will be available, reliable, secure, error-free, or compliant with any law or standard.</li>
-                    <li>Any data transmitted to third-party services will remain confidential, secure, or free from unauthorized access.</li>
+                    <li>Model downloads will be available, complete without interruption, or free from errors introduced by the hosting provider.</li>
                     <li>Defects or errors in the App will be corrected.</li>
                 </ul>
                 <p>No advice or information, whether oral or written, obtained by you from us or through the App shall create any warranty not expressly stated in these Terms.</p>
@@ -655,7 +646,7 @@
                     <li>OUR TOTAL AGGREGATE LIABILITY ARISING FROM OR RELATED TO THESE TERMS OR YOUR USE OF THE APP SHALL <strong>NOT EXCEED THE AMOUNT YOU PAID TO US FOR THE APP</strong>, WHICH, BECAUSE THE APP IS PROVIDED FREE OF CHARGE, IS <strong>ZERO (US $0.00)</strong>.</li>
                     <li>WE ARE NOT LIABLE FOR ANY ACTIONS YOU TAKE OR DECLINE TO TAKE BASED ON AI-GENERATED CONTENT, REGARDLESS OF THE SUBJECT MATTER OR CONSEQUENCES.</li>
                     <li>WE ARE NOT LIABLE FOR ANY INTERRUPTION OF BUSINESS, LOSS OF DATA, OR ANY OTHER COMMERCIAL OR PERSONAL DAMAGES OR LOSSES.</li>
-                    <li>WE ARE NOT LIABLE FOR ANY ACTS, OMISSIONS, POLICIES, DATA PRACTICES, SECURITY INCIDENTS, OR OUTPUTS OF ANY THIRD-PARTY SERVICE, REMOTE AI SERVER, OR MODEL PROVIDER THAT YOU CHOOSE TO USE WITH THE APP.</li>
+                    <li>WE ARE NOT LIABLE FOR ANY ACTS, OMISSIONS, POLICIES, DATA PRACTICES, SECURITY INCIDENTS, OR CONDUCT OF ANY THIRD-PARTY HOSTING PROVIDER FROM WHICH AI MODELS ARE DOWNLOADED.</li>
                     <li>THESE LIMITATIONS APPLY WHETHER THE ALLEGED LIABILITY IS BASED ON CONTRACT, TORT (INCLUDING NEGLIGENCE), STRICT LIABILITY, OR ANY OTHER THEORY, EVEN IF WE HAVE BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES AND EVEN IF A REMEDY SET FORTH IN THESE TERMS IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.</li>
                 </ul>
                 <p>Some jurisdictions do not allow the exclusion or limitation of certain warranties or liabilities. In such jurisdictions, the above limitations apply only to the maximum extent permitted by law, and nothing in these Terms is intended to exclude liability that cannot be excluded under applicable law.</p>
@@ -669,8 +660,7 @@
                     <li>Your access to or use of the App;</li>
                     <li>Your violation of these Terms or any applicable law or regulation;</li>
                     <li>Your violation of any third-party right, including intellectual-property, privacy, or publicity rights;</li>
-                    <li>Any content you submit, transmit, or share through the App;</li>
-                    <li>Any dispute between you and any third-party AI service you configure the App to use.</li>
+                    <li>Any content you submit, transmit, or share through the App.</li>
                 </ul>
                 <p>We reserve the right, at our own expense, to assume the exclusive defense and control of any matter otherwise subject to indemnification by you, in which case you agree to cooperate with our defense of such claim.</p>
             </div>
