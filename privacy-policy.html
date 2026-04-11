@@ -539,9 +539,9 @@
                 <h2><span class="num">2</span> App Store and Device Permissions</h2>
                 <p>The App may request the following device permissions, which are processed locally on your device:</p>
                 <ul>
-                    <li><strong>Microphone:</strong> Required to enable voice input for conversations with AI models. Raw audio is never transmitted to us. Audio may, however, be processed by Apple's Speech Recognition service as described below.</li>
+                    <li><strong>Microphone:</strong> Required to enable voice input for conversations with AI models. Raw audio is never transmitted to us. Audio may, however, be processed by the system's Speech Recognition service as described below.</li>
                     <li><strong>Camera:</strong> Required only if you choose to use the vision or video call features. Images and video frames are processed entirely on your device and are never transmitted to us or to any third party.</li>
-                    <li><strong>Speech Recognition:</strong> The App uses Apple's Speech Recognition framework (<code>SFSpeechRecognizer</code>) to transcribe your voice into text. Depending on your device, language, and iOS capabilities, Apple may perform this transcription <strong>either on your device or on Apple's servers</strong>. When server-based recognition is used, short audio clips are sent to Apple and handled under Apple's own privacy policy — not ours. You can enforce on-device transcription directly within the App by enabling <strong>"Require on-device recognition"</strong> in the App's Settings; when this option is enabled, the App instructs the system to perform speech recognition exclusively on your device, and no audio is sent to Apple. We never receive the audio or the resulting transcript beyond what is needed to pass the text to the on-device AI model.</li>
+                    <li><strong>Speech Recognition:</strong> The App uses the system's built-in Speech Recognition framework to transcribe your voice into text. Depending on your device, language, and iOS capabilities, the system may perform this transcription <strong>either on your device or on the operating system provider's servers</strong>. When server-based recognition is used, short audio clips are sent to the operating system provider and handled under its own privacy policy — not ours. You can enforce on-device transcription directly within the App by enabling <strong>"Require on-device recognition"</strong> in the App's Settings; when this option is enabled, the App instructs the system to perform speech recognition exclusively on your device, and no audio is sent off the device. We never receive the audio or the resulting transcript beyond what is needed to pass the text to the on-device AI model.</li>
                     <li><strong>Network Access:</strong> Used solely to download on-device AI models from their hosting location over HTTPS. Once a model is downloaded, no further network access is required for AI inference.</li>
                 </ul>
                 <p>You may revoke any of these permissions at any time through your iOS Settings. Revoking a permission will disable the associated feature but will not otherwise affect the App.</p>
@@ -594,7 +594,7 @@
                 <p>Because Roles Witch AI stores data locally and does not maintain servers on your behalf, you are responsible for:</p>
                 <ul>
                     <li><strong>Securing your device</strong> with a passcode, Face ID, or Touch ID to prevent unauthorized access to locally stored data.</li>
-                    <li><strong>Managing your backups.</strong> If you enable iCloud Backup or device backups, locally stored data may be included; review Apple's backup settings to control this.</li>
+                    <li><strong>Managing your backups.</strong> If you enable iCloud Backup or device backups, locally stored data may be included; review your device's backup settings to control this.</li>
                     <li><strong>Appropriate use.</strong> You are solely responsible for the content you generate and for compliance with the laws and terms applicable to your use.</li>
                 </ul>
             </div>
@@ -609,7 +609,7 @@
             <!-- 9. International Users -->
             <div class="policy-card">
                 <h2><span class="num">9</span> International Users and Applicable Law</h2>
-                <p>Roles Witch AI is available globally through the Apple App Store. Because we do not collect personal data, most international data-protection obligations (including the GDPR, CCPA/CPRA, and similar regimes) are inapplicable to us as a data controller or processor.</p>
+                <p>Roles Witch AI is available globally through the iOS App Store. Because we do not collect personal data, most international data-protection obligations (including the GDPR, CCPA/CPRA, and similar regimes) are inapplicable to us as a data controller or processor.</p>
                 <p>You are responsible for ensuring that your use of the App complies with the laws of your jurisdiction.</p>
             </div>
 
